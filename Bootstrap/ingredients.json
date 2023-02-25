@@ -1,0 +1,47 @@
+{
+    "fruit_juices": [
+      "name:orange juice",
+      "name:apple juice",
+      "name:pineapple juice",
+      "name:grapefruit juice",
+      "name:cranberry juice"
+    ],
+    "syrups": [
+      "name:grenadine syrup",
+      "name:simple syrup",
+      "name:agave syrup"
+    ],
+    "club_soda_or_sparkling_water": "name:club soda",
+    "tonic_water": "name:tonic water",
+    "ginger_beer_or_ginger_ale": "name:ginger beer",
+    "lemonade_or_limeade": "name:lemonade",
+    "coconut_water": "name:coconut water",
+    "herbal_teas": [
+      "name:peppermint tea",
+      "name:chamomile tea"
+    ],
+    "bitters": "name:bitters",
+    "fresh_fruits_and_herbs": [
+      "name:mint leaves",
+      "name:basil leaves",
+      "name:lemon slices",
+      "name:lime wedges",
+      "name:strawberries",
+      "name:blueberries"
+    ],
+    "cream_or_milk_substitutes": [
+      "name:coconut cream",
+      "name:almond milk",
+      "name:soy milk"
+    ],
+    "ice_cream_or_sorbet": [
+      "name:vanilla ice cream",
+      "name:strawberry sorbet"
+    ]
+  }
+  Note that the format of the JSON object remains the same, but each value now includes "name:" before it. This can make it easier to understand the context of each value in the JSON object.
+  
+  
+  
+  
+  
