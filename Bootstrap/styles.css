@@ -11285,4 +11285,43 @@ textarea.form-control-lg {
   .d-print-none {
     display: none !important;
   }
+
+
+
+/* testing purposes */
+.tabcontent {
+  display: none;
+}
+
+.tablinks:first-child {
+  background-color: #ccc;
+}
+
+.tabcontent:first-child {
+  display: block;
+}
+
+.tablinks {
+  background-color: #f1f1f1;
+  border: none;
+  color: black;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+.tablinks:hover {
+  background-color: #ddd;
+}
+
+.tablinks.active {
+  background-color: #ccc;
+}
+
+/* Show the active tab */
+.tabcontent.active {
+  display: block;
+}
+
 }
