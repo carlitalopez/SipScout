@@ -1,10 +1,4 @@
-/*!
-* Start Bootstrap - Shop Homepage v5.0.5 (https://startbootstrap.com/template/shop-homepage)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE)
-*/
-// This file is intentionally blank
-// Use this file to add JavaScript to your project
+var mycart;
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
@@ -31,7 +25,7 @@ function ready() {
 
 function removeCartItem(event) {
     var buttonClicked = event.target
-    buttonClicked.parentElement.parentElement.parentElement.remove()
+    buttonClicked.parentElement.remove()
     
 }
 
@@ -69,6 +63,8 @@ function addItemToCart(title,imageSrc) {
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
+    mycart = cartItems
     
 }
 
+console.log(mycart)
