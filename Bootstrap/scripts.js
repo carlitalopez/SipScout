@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 var mycart;
+=======
+>>>>>>> 136b18dba809439433ec35bf3014da6d4af8194d
 
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)

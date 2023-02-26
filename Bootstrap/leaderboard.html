@@ -1,53 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Leader Board</title>
+	<meta charset="UTF-8">
+	<title>Leaderboard UI Design</title>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="styles.css"rel="stylesheet"/>
+
 </head>
 <body>
-    <section>
-        <div class="Top_Gainers">
-            <h1> Top Cocktails </h1>
-        </div>
+	<section class="main-content">
+		<div class="container">
+			<h1>Top Cocktails of the Week</h1>
+			<br>
+			<br>
+			<h4>All Users</h4>
 
-        <h2> Cocktail Ranking</h2>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Cocktail</th>
-                    <th>Points</th>
-                </tr>
-            </thead>
-
-            <tbody>
-                <tr id = "row-1">
-                    <td>Moscow Mule</td>
-                    <td> 100 </td>
-                </tr>
-
-                <tr id = "row-2">
-                    <td>Pisco Sour </td>
-                    <td> 70 </td>
-                </tr>
-
-                <tr id = "row-3">
-                    <td>Pina Colada</td>
-                    <td> 80 </td>
-                </tr>
-            </tbody>
-
-
-        </table>
-    </section>
-   
-
-    
-
-
-
-    
-</body>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Cocktail</th>
+						<th>Points</th>
+						<th>Recipe</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user1.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Mojito</h5>
+									<p class="text-muted mb-0">Top Rated</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,253</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
+							</div>
+						</td>
+						<td>
+							<button class="btn btn-success btn-sm">Recipe</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user2.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Pisco Sour</h5>
+									<p class="text-muted mb-0">Top Rated</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,051</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
+							</div>
+						</td>
+						
+						<td>
+							<button class="btn btn-success btn-sm">Recipe</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user3.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Margarita</h5>
+									<p class="text-muted mb-0">Top Rated</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">1,012</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
+							</div>
+						</td>
+	
+						<td>
+							<button class="btn btn-success btn-sm">Recipe</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user4.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Moscow Mule</h5>
+									<p class="text-muted mb-0">Top Rated</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">986</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
+							</div>
+						</td>
+						<td>
+							<button class="btn btn-success btn-sm">Recipe</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div class="d-flex align-items-center">
+								<img src="img/user5.jpg" class="circle-img circle-img--small mr-2" alt="User Img">
+								<div class="user-info__basic">
+									<h5 class="mb-0">Whiskey Sour</h5>
+									<p class="text-muted mb-0">Top Rated</p>
+								</div>
+							</div>
+						</td>
+						<td>
+							<div class="d-flex align-items-baseline">
+								<h4 class="mr-1">951</h4><small class="text-success"><i class="fa fa-arrow-up"></i>5%</small>
+							</div>
+						</td>
+						<td>
+							<button class="btn btn-success btn-sm" >Recipe</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
 </html>
