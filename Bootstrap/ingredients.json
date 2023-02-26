@@ -39,7 +39,6 @@
       "name:strawberry sorbet"
     ]
   }
-  Note that the format of the JSON object remains the same, but each value now includes "name:" before it. This can make it easier to understand the context of each value in the JSON object.
   
   
   
