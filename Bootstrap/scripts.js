@@ -1,4 +1,6 @@
 
+var mycart =[];
+
 if (document.readyState == 'loading') {
     document.addEventListener('DOMContentLoaded', ready)
 } else {
@@ -62,7 +64,7 @@ function addItemToCart(title,imageSrc) {
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    mycart = cartItems
+    mycart.push(cartItems)
     
 }
 
