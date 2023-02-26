@@ -14,7 +14,11 @@ if (document.readyState == 'loading') {
 
 
 function ready() {
-    
+    var removeCartItemButtons = document.getElementsByClassName('btn-danger')
+    for (var i = 0; i < removeCartItemButtons.length; i++) {
+        var button = removeCartItemButtons[i]
+        button.addEventListener('click', removeCartItem)
+    }
 
     var addToCartButtons = document.getElementsByClassName('btn-outline-dark mt-auto')
     for (var i = 0; i < addToCartButtons.length; i++) {
@@ -22,6 +26,12 @@ function ready() {
         button.addEventListener('click', addToCartClicked)
     }
 
+    
+}
+
+function removeCartItem(event) {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.parentElement.remove()
     
 }
 
@@ -36,7 +46,7 @@ function addToCartClicked(event) {
     
 }
 
-function addItemToCart(title, price, imageSrc) {
+function addItemToCart(title,imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -54,10 +64,11 @@ function addItemToCart(title, price, imageSrc) {
         </div>
         
         <div class="cart-quantity cart-column">
-            <input class="cart-quantity-input" type="number" value="1">
+            
             <button class="btn btn-danger" type="button">REMOVE</button>
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
     
 }
+
