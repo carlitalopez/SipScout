@@ -64,7 +64,8 @@ function addItemToCart(title,imageSrc) {
         </div>`
     cartRow.innerHTML = cartRowContents
     cartItems.append(cartRow)
-    mycart.push(cartItems)
+    mycart.push(title)
+    
     
 }
 
