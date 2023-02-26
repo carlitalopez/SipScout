@@ -6,7 +6,11 @@
 // This file is intentionally blank
 // Use this file to add JavaScript to your project
 
-
+if (document.readyState == 'loading') {
+    document.addEventListener('DOMContentLoaded', ready)
+} else {
+    ready()
+}
 
 
 function ready() {
@@ -23,15 +27,16 @@ function ready() {
 
 function addToCartClicked(event) {
     var button = event.target
-    var shopItem = button.parentElement.parentElement
+    var shopItem = button.parentElement.parentElement.parentElement
     var title = shopItem.getElementsByClassName('fw-bolder')[0].innerText
-    xonsole.log(title)
+    
     var imageSrc = shopItem.getElementsByClassName('card-img-top')[0].src
-    addItemToCart(title, price, imageSrc)
+    
+    addItemToCart(title,imageSrc)
     
 }
 
-function addItemToCart(title, imageSrc) {
+function addItemToCart(title, price, imageSrc) {
     var cartRow = document.createElement('div')
     cartRow.classList.add('cart-row')
     var cartItems = document.getElementsByClassName('cart-items')[0]
@@ -42,4 +47,17 @@ function addItemToCart(title, imageSrc) {
             return
         }
     }
+    var cartRowContents = `
+        <div class="cart-item cart-column">
+            <img class="cart-item-image" src="${imageSrc}" width="100" height="100">
+            <span class="cart-item-title">${title}</span>
+        </div>
+        
+        <div class="cart-quantity cart-column">
+            <input class="cart-quantity-input" type="number" value="1">
+            <button class="btn btn-danger" type="button">REMOVE</button>
+        </div>`
+    cartRow.innerHTML = cartRowContents
+    cartItems.append(cartRow)
+    
 }
