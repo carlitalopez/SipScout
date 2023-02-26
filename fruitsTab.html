@@ -9,6 +9,7 @@
         
         <link href="styles.css" rel="stylesheet" />
         <script src="scripts.js" async></script>
+
     </head>
     <body>
         <!-- Navigation-->
@@ -31,7 +32,11 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        
+                        <button class="btn btn-outline-dark" type="submit">
+                            <i class="bi-cart-fill me-1"></i><a href="cart.html">
+                            Cart</a>
+                            <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                        </button>
                     </form>
                 </div>
             </div>
@@ -40,8 +45,8 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">I hope you are 21</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">Make your own masterpiece</p>
+                    <h1 class="display-4 fw-bolder">Add a Jackfruit</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">We won't tell</p>
                 </div>
             </div>
         </header>
@@ -80,12 +85,12 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://mybartender.com/wp-content/uploads/2022/11/white-rums.jpg" alt="..." />
+                            <img class="card-img-top" src="https://cdn.britannica.com/22/187222-050-07B17FB6/apples-on-a-tree-branch.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">White Rum</h5>
+                                    <h5 class="fw-bolder">Apple</h5>
                                     
                                     <!-- Product price-->
                                     
@@ -93,7 +98,7 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to Cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#" onclick="addToCart(Apple)">Add to Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -102,12 +107,12 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://i5.walmartimages.com/asr/0930a69d-1fc1-4acc-af3a-51db1b4d2eb9.ce9470c65cc0203a1fbe537cfddcb924.png" alt="..." />
+                            <img class="card-img-top" src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.hawaiimagazine.com/content/uploads/2020/12/pineapple-opener-1024x683.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Tequilla</h5>
+                                    <h5 class="fw-bolder">Pineapple</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -132,12 +137,12 @@
                             <!-- Sale badge-->
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"></div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://www.costcuisine.com/wp-content/uploads/2022/11/rum3.jpg" alt="..." />
+                            <img class="card-img-top" src="https://cdn.britannica.com/10/187210-050-205CC3DD/cranberries.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Spiced Rum</h5>
+                                    <h5 class="fw-bolder">Cranberry</h5>
                                     <!-- Product price-->
                                     <span class="text-muted text-decoration-line-through"></span>
                                     
@@ -152,12 +157,12 @@
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://www.jimbeam.com/sites/default/files/2019-04/Jim%20Beam%20Bourbon.jpg" alt="..." />
+                            <img class="card-img-top" src="https://www.georgeperry.co.uk/images/P/GP_74989668_GP_XXL.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Bourbon</h5>
+                                    <h5 class="fw-bolder">Orange</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small text-warning mb-2">
                                         <div class="bi-star-fill"></div>
@@ -172,11 +177,12 @@
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" id="cartButton" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
     
+
     <section class="container content-section">
         <h2 class="section-header">CART</h2>
         <div class="cart-row">
@@ -187,6 +193,11 @@
         </div>
         <button class="btn btn-primary btn-purchase" type="button">Make The Drink</button>
         </section>
-                
+
+    <!-- Footer-->
+    <!--footer class="py-5 bg-dark">
+        <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2022</p></div>
+    </footer>-->
+
     </body>
-    </html
+</html
